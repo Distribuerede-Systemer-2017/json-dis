@@ -49,14 +49,14 @@ Lad os lave nogle opdigtede Users og bruge GSON's `.toJson()` metode til at send
 #### Opgave 3.5 - Frivillig git-træning
 Når du har et system som fungerer, så kan du dele dine ændringer ved at `pushe` dine tilføjelser til repositoriet. Har du lavet flere ændringer siden sidste commit, så skal disse først commites for at kunne fortsætte. Check evt. med `git status`. Når du har commitet dine ændringer, så skriv: `git push origin <dit-branch-navn>` (OBS: oplever du en permission fejl her, så er du ikke med i vores organisation - hiv fat i mig).
 
-##### Lav et pull-request
+##### Lav et Pull Request (PR)
 Da det ikke anbefales at man kan pushe ændringer direkte ind i `master` branch kan i på Github lave et såkald "Pull Request". Kort fortalt så beder I om at "pull" jeres branch ind `master` branch. Inden det sker, kan man tjekke hvilke ting der er ændret, om der er nogle conflicts osv. Først til sidst når et pull requests godkendes bliver ændringerne merged ind i `master` branch.
 
 1. Klik på fanen "Pull requests" på Github på dette repository
 2. Klik "New Pull Request"
 3. Vælg `master` som base og `<dit-branch-navn>` som compare
 4. Tryk "Create Pull Request"
-5. Beskriv kort hvad dette pull request gør
+5. Beskriv kort hvad dette PR gør
 6. I oversigten kan du se om du har nogle merge conflicts
 
-Jeg gennemgår alle pull requests og merger den bedste :)
+Jeg gennemgår alle PR's og merger den bedste :)
