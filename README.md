@@ -30,7 +30,7 @@ Nu da vi har GSON biblioteket installeret i vores projekt, kan vi bruge de metod
 4. Giv klassen `skills` som instansvariabel (Som `ArrayList<String>`)
 5. Lav selv nødvendige `get/set/add` metoder til variablerne
 
-Hvis du lavede opgave 1.5, så kan du nu lave et "checkpoint" på din branch, et såkaldt `commit`. Hvis ikke, så kan du springe de 4 sidste steps over.
+Hvis du lavede opgave 1.5, så kan du nu lave et "checkpoint" på din branch, et såkaldt `commit`. Hvis ikke, så kan du springe de 4 steps nedenfor over.
 1. Skriv `git status` for at se hvad der har ændret sig siden dit sidste commit
 2. Skriv `git add .` for at "stage" alle ændringerne til commit
 3. Skriv `git commit -m "<din beskrivelse af hvad du har lavet>"`
@@ -45,3 +45,18 @@ Lad os lave nogle opdigtede Users og bruge GSON's `.toJson()` metode til at send
 4. Skift "hello world!" i `outToClient.println()` ud med `usersAsJson`
 5. Kør din webserver (husk måske at ændre port-nr)
 6. Lav et request til severen i din browser og se resultatet!
+
+#### Opgave 3.5 - Frivillig git-træning
+Når du har et system som fungerer, så kan du dele dine ændringer ved at `pushe` dine tilføjelser til repositoriet. Har du lavet flere ændringer siden sidste commit, så skal disse først commites for at kunne fortsætte. Check evt. med `git status`. Når du har commitet dine ændringer, så skriv: `git push origin <dit-branch-navn>` (OBS: oplever du en permission fejl her, så er du ikke med i vores organisation - hiv fat i mig).
+
+##### Lav et pull-request
+Da det ikke anbefales at man kan pushe ændringer direkte ind i `master` branch kan i på Github lave et såkald "Pull Request". Kort fortalt så beder I om at "pull" jeres branch ind `master` branch. Inden det sker, kan man tjekke hvilke ting der er ændret, om der er nogle conflicts osv. Først til sidst når et pull requests godkendes bliver ændringerne merged ind i `master` branch.
+
+1. Klik på fanen "Pull requests" på Github på dette repository
+2. Klik "New Pull Request"
+3. Vælg `master` som base og `<dit-branch-navn>` som compare
+4. Tryk "Create Pull Request"
+5. Beskriv kort hvad dette pull request gør
+6. I oversigten kan du se om du har nogle merge conflicts
+
+Jeg gennemgår alle pull requests og merger den bedste :)
