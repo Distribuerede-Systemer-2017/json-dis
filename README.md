@@ -25,7 +25,7 @@ Nu da vi har GSON biblioteket installeret i vores projekt, kan vi bruge de metod
 #### Opgave 3.
 Lad os lave nogle opdigtede Users og bruge GSON's `.toJson()` metode til at sende vores brugere som JSON tilbage til vores klient.
 
-1. Lav en ny `ArrayList<Users>` på linje 44 i `ResponseHandler` klassen, og kald den `users`
+1. Lav en ny `ArrayList<Users>` under linje 38 i `ResponseHandler` klassen, og kald den `users`
 2. Opdigt et par test brugere og tilføj dem til `users`
 3. Konverter din liste til JSON med følgende kode: `String usersAsJson = new Gson().toJson(users);`
 4. Skift "hello world!" i `outToClient.println()` ud med `usersAsJson`
