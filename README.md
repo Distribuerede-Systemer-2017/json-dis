@@ -11,7 +11,7 @@ Klon og kør dette repository på din computer. Læg mærke til at projektet her
 3. Åbn IntelliJ, lav et nyt projekt og placer projektet oven i dette repository
 4. Åbn `json-dis` mappen i IntellJ og find filen `pom.xml`
 5. Højreklik på `pom.xml` og tryk "Add as Maven Project". Bruger du ikke IntelliJ, så følg guiden til installation af GSON på  Learn.
-6. Hvis `pom.xml` nu er et blåt "M", så er du færdig
+6. Hvis `pom.xml` nu er et blåt "M"-ikon, så er du færdig
 
 #### Opgave 2.
 Nu da vi har GSON biblioteket installeret i vores projekt, kan vi bruge de metoder som er tilrådighed. Som vidst i mine slides, vil vi gerne parse vores Java objekter til et JSON repræsenteret tekst. For at lave et eksempel på hvordan dette kunne foregå uden at vi forbinder til en database, kan vi lave et `User` object som vi selv indsætter data i.
