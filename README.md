@@ -14,7 +14,7 @@ Klon og kør dette repository på din computer. Læg mærke til at projektet her
 6. Hvis `pom.xml` nu er et blåt "M"-ikon, så er du færdig
 
 #### Opgave 2.
-Nu da vi har GSON biblioteket installeret i vores projekt, kan vi bruge de metoder som er tilrådighed. Som vidst i mine slides, vil vi gerne parse vores Java objekter til et JSON repræsenteret tekst. For at lave et eksempel på hvordan dette kunne foregå uden at vi forbinder til en database, kan vi lave et `User` object som vi selv indsætter data i.
+Nu da vi har GSON biblioteket installeret i vores projekt, kan vi bruge de metoder som er tilrådighed. Som vist i mine slides, vil vi gerne parse vores Java objekter til et JSON repræsenteret tekst. For at lave et eksempel på hvordan dette kunne foregå uden at vi forbinder til en database, kan vi lave et `User` object som vi selv indsætter data i.
 
 1. Opret en ny package i mappen `src` og kald den `Models`
 2. Lav klassen `User` i din nyoprettede package 
