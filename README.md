@@ -30,7 +30,7 @@ Nu da vi har GSON biblioteket installeret i vores projekt, kan vi bruge de metod
 4. Giv klassen `skills` som instansvariabel (Som `ArrayList<String>`)
 5. Lav selv nødvendige `get/set/add` metoder til variablerne
 
-Hvis du lavede opgave 1.5, så kan du nu lave et "checkpoint" på din branch, et såkaldt `commit`
+Hvis du lavede opgave 1.5, så kan du nu lave et "checkpoint" på din branch, et såkaldt `commit`. Hvis ikke, så kan du springe de 4 sidste steps over.
 1. Skriv `git status` for at se hvad der har ændret sig siden dit sidste commit
 2. Skriv `git add .` for at "stage" alle ændringerne til commit
 3. Skriv `git commit -m "<din beskrivelse af hvad du har lavet>"`
