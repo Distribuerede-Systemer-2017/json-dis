@@ -9,6 +9,11 @@ public class User {
     String Password;
     ArrayList<String> skills;
 
+    public User(){
+
+        skills = new ArrayList<String>();
+    }
+
     public String getUsername() {
 
         return Username;
@@ -30,8 +35,8 @@ public class User {
         Password = password;
     }
 
-    public void setSkills(ArrayList<String> skills) {
-        this.skills = skills;
+    public void setSkills(String skills) {
+        this.skills.add(skills);
     }
 
     public void addSkills(String skill){
