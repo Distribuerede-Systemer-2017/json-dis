@@ -1,8 +1,12 @@
+import Models.User;
+import com.google.gson.Gson;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
 
 public class ResponseHandler implements Runnable {
 
@@ -37,7 +41,25 @@ public class ResponseHandler implements Runnable {
             outToClient.println("Server: Hackerbot");
             outToClient.println("");
 
-            outToClient.println("Hello world!");
+            ArrayList<User> users = new ArrayList<User>();
+
+            User iben = new User();
+            iben.setUsername("Iben Foldager");
+            iben.setPassword("kodeord");
+
+            User lucas = new User();
+            lucas.setUsername("Lucas Weje");
+            lucas.setPassword("kodeord123");
+
+            users.add(lucas);
+            users.add(iben);
+
+            String usersAsJson = new Gson().toJson(users);
+
+
+            outToClient.println(usersAsJson);
+
+
 
             //Flush'n'close
             outToClient.flush();
