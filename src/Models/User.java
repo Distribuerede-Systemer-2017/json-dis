@@ -1,6 +1,5 @@
 package Models;
 
-
 import java.util.ArrayList;
 
 public class User {
@@ -12,10 +11,10 @@ public class User {
     public User(){
 
     }
-    public User(String username, String password, ArrayList<String> skills){
+    public User(String username, String password){
         this.username = username;
         this.password = password;
-        this.skills = skills;
+        this.skills = new ArrayList<String>();
     }
 
 
@@ -39,7 +38,7 @@ public class User {
         return skills;
     }
 
-    public void setSkills(ArrayList<String> skills) {
-        this.skills = skills;
+    public void setSkills(String skill) {
+        this.skills.add(skill);
     }
 }

@@ -44,32 +44,17 @@ public class ResponseHandler implements Runnable {
             //nyt users array af objekter med typen User
             ArrayList<User> users = new ArrayList<User>();
 
-            //nyt array bestående af Strings
-            ArrayList<String> skills = new ArrayList<String>();
+            //nyt objekt af user og set username og password
+            User user = new User("Muneeb","password");
 
-            //nyt objekt af user
-            User user = new User();
-
-            //set username og password
-            user.setUsername("Munne");
-            user.setPassword("password");
-
-            //add java og html/css som strings til det andet array "skills"
-            skills.add("java");
-            skills.add("html/css");
-
-            //set user's egen skills array (som er tomt) lig med det skills array der er opprettet her (som ikke er tomt)
-            user.setSkills(skills);
-
+            //add java og html/css som strings til skills array
+            user.setSkills("java");
+            user.setSkills("html/css");
 
             //alt om igen
-            ArrayList<String> skills2 = new ArrayList<String>();
-            User user2 = new User();
-            user2.setUsername("Saim");
-            user2.setPassword("password");
-            skills2.add("java");
-            skills2.add("html/css");
-            user2.setSkills(skills2);
+            User user2 = new User("Saim", "password");
+            user2.setSkills("java");
+            user2.setSkills("html/css");
 
             //tilføj user objekter til users array'et
             users.add(user);
