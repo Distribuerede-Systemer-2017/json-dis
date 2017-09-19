@@ -7,9 +7,10 @@ public class User {
     private String username, password;
     private ArrayList<String> skills;
 
-    public User(String username, String password) {
+    public User(String username, String password, ArrayList<String> skills) {
         this.username = username;
         this.password = password;
+        this.skills = skills;
     }
 
     public String getUsername() {

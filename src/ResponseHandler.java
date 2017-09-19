@@ -12,6 +12,9 @@ public class ResponseHandler implements Runnable {
 
     private Socket remoteSocket;
     private ArrayList<User> users;
+    private ArrayList<String> skillsUser1;
+    private ArrayList<String> skillsUser2;
+    private ArrayList<String> skillsUser3;
 
     public ResponseHandler(Socket remoteSocket) {
         this.remoteSocket = remoteSocket;
@@ -45,7 +48,7 @@ public class ResponseHandler implements Runnable {
             users = new ArrayList<User>();
             generateUsers();
             String usersAsJson = new Gson().toJson(users);
-            
+
             outToClient.println(usersAsJson);
 
             //Flush'n'close
@@ -57,11 +60,22 @@ public class ResponseHandler implements Runnable {
         }
     }
     public void generateUsers() {
-        User user1 = new User("Jens", "Jens123");
-        User user2 = new User("Karl", "Karl123");
-        User user3 = new User("Emil", "Emil123");
+        generateUserSkills();
+
+        User user1 = new User("Jens", "Jens123", skillsUser1);
+        User user2 = new User("Karl", "Karl123", skillsUser2);
+        User user3 = new User("Emil", "Emil123", skillsUser3);
         users.add(user1);
         users.add(user2);
         users.add(user3);
+    }
+    public void generateUserSkills() {
+        skillsUser1 = new ArrayList<String>();
+        skillsUser2 = new ArrayList<String>();
+        skillsUser3 = new ArrayList<String>();
+
+        skillsUser1.add("Spise");
+        skillsUser2.add("Loebe");
+        skillsUser3.add("Kode");
     }
 }
