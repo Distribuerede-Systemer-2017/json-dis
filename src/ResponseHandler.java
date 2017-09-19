@@ -3,6 +3,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
+import Models.User;
+import com.google.gson.Gson;
+
 
 public class ResponseHandler implements Runnable {
 
@@ -37,7 +41,44 @@ public class ResponseHandler implements Runnable {
             outToClient.println("Server: Hackerbot");
             outToClient.println("");
 
-            outToClient.println("Hello world!");
+            //nyt users array af objekter med typen User
+            ArrayList<User> users = new ArrayList<User>();
+
+            //nyt array bestående af Strings
+            ArrayList<String> skills = new ArrayList<String>();
+
+            //nyt instans af user construktor
+            User user = new User();
+
+            //set username og password
+            user.setUsername("Munne");
+            user.setPassword("password");
+
+            //add java og html/css som strings til det andet array "skills"
+            skills.add("java");
+            skills.add("html/css");
+
+            //set user's egen skills array (som er tomt) lig med det skills array der er opprettet her (som ikke er tomt)
+            user.setSkills(skills);
+
+            //tilføj user objektet til users array'et
+            users.add(user);
+
+            //alt om igen
+            ArrayList<String> skills1 = new ArrayList<String>();
+            User user1 = new User();
+            user1.setUsername("Saim");
+            user1.setPassword("password");
+            skills1.add("java");
+            skills1.add("html/css");
+            user1.setSkills(skills1);
+
+            users.add(user1);
+
+            //konverter users array fra java object til Json object (som er eén lang string)
+            String usersAsJson = new Gson().toJson(users);
+
+            outToClient.println(usersAsJson);
 
             //Flush'n'close
             outToClient.flush();

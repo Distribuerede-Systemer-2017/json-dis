@@ -9,6 +9,9 @@ public class User {
     String password;
     ArrayList<String> skills;
 
+    public User(){
+
+    }
     public User(String username, String password, ArrayList<String> skills){
         this.username = username;
         this.password = password;
