@@ -1,12 +1,17 @@
+import Models.User;
+import com.google.gson.Gson;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
 
 public class ResponseHandler implements Runnable {
 
     private Socket remoteSocket;
+    private ArrayList<User> users;
 
     public ResponseHandler(Socket remoteSocket) {
         this.remoteSocket = remoteSocket;
@@ -37,7 +42,11 @@ public class ResponseHandler implements Runnable {
             outToClient.println("Server: Hackerbot");
             outToClient.println("");
 
-            outToClient.println("Hello world!");
+            users = new ArrayList<User>();
+            generateUsers();
+            String usersAsJson = new Gson().toJson(users);
+            
+            outToClient.println(usersAsJson);
 
             //Flush'n'close
             outToClient.flush();
@@ -46,5 +55,13 @@ public class ResponseHandler implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void generateUsers() {
+        User user1 = new User("Jens", "Jens123");
+        User user2 = new User("Karl", "Karl123");
+        User user3 = new User("Emil", "Emil123");
+        users.add(user1);
+        users.add(user2);
+        users.add(user3);
     }
 }
