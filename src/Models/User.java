@@ -27,8 +27,8 @@ public class User {
         return skills;
     }
 
-    public void addSkills(String skillsToAdd) {
-        skills.add(skillsToAdd);
+    public void addSkills(String skill) {
+        skills.add(skill);
     }
 }
 
