@@ -1,5 +1,6 @@
 package models;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -8,7 +9,7 @@ import java.util.ArrayList;
  */
 public class User {
 
-    // Parameters
+    // Definition of Object Attributes
     String username;
     String password;
     ArrayList<String> skills;
