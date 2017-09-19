@@ -3,6 +3,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
+import Models.User;
+import com.google.gson.Gson;
+
 
 public class ResponseHandler implements Runnable {
 
@@ -37,7 +41,29 @@ public class ResponseHandler implements Runnable {
             outToClient.println("Server: Hackerbot");
             outToClient.println("");
 
-            outToClient.println("Hello world!");
+            //nyt users array af objekter med typen User
+            ArrayList<User> users = new ArrayList<User>();
+
+            //nyt objekt af user og set username og password
+            User user = new User("Muneeb","password");
+
+            //add java og html/css som strings til skills array
+            user.setSkills("java");
+            user.setSkills("html/css");
+
+            //alt om igen
+            User user2 = new User("Saim", "password");
+            user2.setSkills("java");
+            user2.setSkills("html/css");
+
+            //tilføj user objekter til users array'et
+            users.add(user);
+            users.add(user2);
+
+            //konverter users array fra java object til Json object (som er eén lang string)
+            String usersAsJson = new Gson().toJson(users);
+
+            outToClient.println(usersAsJson);
 
             //Flush'n'close
             outToClient.flush();
