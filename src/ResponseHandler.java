@@ -47,7 +47,7 @@ public class ResponseHandler implements Runnable {
             //nyt array bestående af Strings
             ArrayList<String> skills = new ArrayList<String>();
 
-            //nyt instans af user construktor
+            //nyt objekt af user
             User user = new User();
 
             //set username og password
@@ -61,19 +61,19 @@ public class ResponseHandler implements Runnable {
             //set user's egen skills array (som er tomt) lig med det skills array der er opprettet her (som ikke er tomt)
             user.setSkills(skills);
 
-            //tilføj user objektet til users array'et
-            users.add(user);
 
             //alt om igen
-            ArrayList<String> skills1 = new ArrayList<String>();
-            User user1 = new User();
-            user1.setUsername("Saim");
-            user1.setPassword("password");
-            skills1.add("java");
-            skills1.add("html/css");
-            user1.setSkills(skills1);
+            ArrayList<String> skills2 = new ArrayList<String>();
+            User user2 = new User();
+            user2.setUsername("Saim");
+            user2.setPassword("password");
+            skills2.add("java");
+            skills2.add("html/css");
+            user2.setSkills(skills2);
 
-            users.add(user1);
+            //tilføj user objekter til users array'et
+            users.add(user);
+            users.add(user2);
 
             //konverter users array fra java object til Json object (som er eén lang string)
             String usersAsJson = new Gson().toJson(users);
