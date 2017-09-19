@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 public class User {
 
-    String username;
-    String password;
-    ArrayList<String> skills;
+    private String username;
+    private String password;
+    private  ArrayList<String> skills;
 
     public User(){
 
