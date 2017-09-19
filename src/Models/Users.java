@@ -8,6 +8,12 @@ public class Users {
     String password;
     ArrayList<String> skills = new ArrayList();
 
+    public Users(String username, String password, ArrayList<String> skills) {
+    this.username = username;
+    this.password = password;
+    this.skills = skills;
+    }
+
     public String getUsername() {
         return username;
     }
