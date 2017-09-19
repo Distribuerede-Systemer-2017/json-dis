@@ -45,10 +45,10 @@ public class ResponseHandler implements Runnable {
             // Create List of users to send to client
             ArrayList<User> users = new ArrayList<User>();
 
-            //Generate User objects
+            // Generate User objects
             User u1 = new User("Filip","1234");
-            u1.addSkill("Java");
-            u1.addSkill("CSS");
+            u1.addSkill("Walking");
+            u1.addSkill("Jumping");
 
             User u2 = new User("Henrik", "4444");
             u2.addSkill("Cooking");
