@@ -13,6 +13,17 @@ public class ResponseHandler implements Runnable {
 
     private Socket remoteSocket;
 
+    private ArrayList<Users> users;
+
+    private Users user1;
+    private Users user2;
+    private Users user3;
+    private ArrayList<String> user1skills;
+    private ArrayList<String> user2skills;
+    private ArrayList<String> user3skills;
+
+    private String userAsJson;
+
     public ResponseHandler(Socket remoteSocket) {
         this.remoteSocket = remoteSocket;
     }
@@ -43,22 +54,22 @@ public class ResponseHandler implements Runnable {
             outToClient.println("");
 
             //Opgave 3 ArrayList
-            ArrayList<Users> users = new ArrayList();
+            users = new ArrayList();
 
             //Tilfaeldige brugere
-            ArrayList<String> user1skills = new ArrayList();
+            user1skills = new ArrayList();
             user1skills.add("Tennis");
             user1skills.add("Markraes");
-            Users user1 = new Users("Christian Mikkelsen", "1234", user1skills);
+            user1 = new Users("Christian Mikkelsen", "1234", user1skills);
 
-            ArrayList<String> user2skills = new ArrayList();
+            user2skills = new ArrayList();
             user2skills.add("Promoter");
             user2skills.add("PUBG");
-            Users user2 = new Users("KJ", "4321", user2skills);
+            user2 = new Users("KJ", "4321", user2skills);
 
-            ArrayList<String> user3skills = new ArrayList();
+            user3skills = new ArrayList();
             user3skills.add("Dancefloor");
-            Users user3 = new Users("Lasse", "5678", user3skills);
+            user3 = new Users("Lasse", "5678", user3skills);
 
             //Tilfoejer brugere til Users ArrayList
             users.add(user1);
@@ -66,7 +77,7 @@ public class ResponseHandler implements Runnable {
             users.add(user3);
 
             //Konversion til JSON
-            String userAsJson = new Gson().toJson(users);
+            userAsJson = new Gson().toJson(users);
 
             outToClient.println(userAsJson);
 

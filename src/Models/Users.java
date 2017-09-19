@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Users {
 
-    String username;
-    String password;
-    ArrayList<String> skills = new ArrayList();
+    private String username;
+    private String password;
+    private ArrayList<String> skills = new ArrayList();
 
     public Users(String username, String password, ArrayList<String> skills) {
     this.username = username;
