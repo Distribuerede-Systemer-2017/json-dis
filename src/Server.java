@@ -13,7 +13,7 @@ public class Server {
             ServerSocket serverSocket = new ServerSocket(PORT);
 
             while (true) {
-
+                //Gode øvelser! Mvh. Morten
                 System.out.println("Wating for clients on port " + PORT);
 
                 //Hang while-loop and wait for socket request
